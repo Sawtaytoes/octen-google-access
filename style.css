@@ -1,0 +1,24 @@
+:root { color-scheme: light dark; font-family: system-ui, sans-serif; line-height: 1.6; }
+body { margin: 0; background: #f5f7fa; color: #192637; }
+main { max-width: 760px; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
+header, section { margin-bottom: 2.5rem; }
+h1, h2, h3 { line-height: 1.2; }
+h1 { font-size: clamp(2rem, 6vw, 3.25rem); margin: 0.2rem 0 0.8rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.15rem; margin-top: 0; }
+p { max-width: 70ch; }
+a { color: #2158a5; }
+.eyebrow { font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+.cards { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.cards article { background: #fff; border: 1px solid #d5dfe9; border-radius: 12px; padding: 1.25rem; }
+nav { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 3rem; }
+.button { background: #2158a5; border: 1px solid #2158a5; border-radius: 8px; color: #fff; display: inline-block; padding: 0.6rem 1rem; text-decoration: none; }
+.button.secondary { background: transparent; color: #2158a5; }
+footer { border-top: 1px solid #d5dfe9; color: #526174; padding-top: 1rem; }
+@media (prefers-color-scheme: dark) {
+  body { background: #111923; color: #ecf2f8; }
+  .cards article { background: #1b2836; border-color: #36475a; }
+  a, .button.secondary { color: #9ec6ff; }
+  .button { background: #316bb8; border-color: #316bb8; }
+  footer { border-color: #36475a; color: #adbdcf; }
+}
