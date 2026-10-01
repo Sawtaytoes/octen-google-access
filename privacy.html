@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy policy | Octen Google access</title>
+  <meta name="description" content="Privacy information for Horizon and Mail Sifter Google account connections.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow"><a href="index.html">Octen Google access</a></p>
+      <h1>Privacy policy</h1>
+      <p>Effective October 1, 2026</p>
+    </header>
+    <section>
+      <h2>What the applications access</h2>
+      <p>Horizon uses the Google account identity needed to identify a connection, plus read-only access to the account’s calendar list and events. It uses these details to display calendars and events.</p>
+      <p>Mail Sifter uses the Google account identity needed to identify a connection, Gmail access to read, organize, compose, and send messages, and read-only Contacts access to help suggest recipient addresses. Mail Sifter can alternatively connect to other mail providers through IMAP and SMTP using the credentials supplied for those accounts.</p>
+      <p>Each application has a separate Google OAuth client. A connection to one does not grant the other access. Each account holder must authorize each connection.</p>
+    </section>
+    <section>
+      <h2>Where data goes</h2>
+      <p>The applications run on a privately operated TrueNAS system. Their databases on that system store connection tokens and the account data needed to provide their features, such as mail information, message drafts, and calendar events. This data is not stored in this GitHub repository or on this public information website.</p>
+      <p>Google continues to store the original Gmail, Calendar, and Contacts data. The applications communicate with Google for sign-in and the Google features you connect. Mail Sifter can also communicate with configured mail providers and, when you use its shipment features, shipping carriers. The applications do not use a separate Octen cloud service to store connected-account data.</p>
+    </section>
+    <section>
+      <h2>Sharing and use</h2>
+      <p>The applications use connected-account data to provide their requested features. They do not sell Google user data or use it for advertising. The public information website is hosted by GitHub Pages and does not request access to a connected account.</p>
+    </section>
+    <section>
+      <h2>Access, revocation, and deletion</h2>
+      <p>You can revoke an application’s Google access in <a href="https://myaccount.google.com/connections">Google Account settings</a>. Revocation stops future Google API access, but records already copied into the local application may remain. Contact the operator of your private installation to request deletion of locally stored account data. You may also disconnect an account in the application where that option is available.</p>
+    </section>
+    <section>
+      <h2>Questions and changes</h2>
+      <p>For questions about your account or a deletion request, contact the person who operates your installation of Horizon or Mail Sifter. Updates to this policy will be published on this page, with a new effective date.</p>
+    </section>
+    <footer><a href="index.html">Home</a> · <a href="https://github.com/Sawtaytoes/octen-google-access/blob/main/README.md">Project README</a></footer>
+  </main>
+</body>
+</html>
