@@ -11,5 +11,5 @@ The applications run on a privately hosted TrueNAS system. Their local databases
 
 Read the [privacy policy](privacy.html) for the data each application uses, where it is stored, and how to revoke access. For questions about an account connected to a private installation, contact the person who operates that installation.
 
-Public information site: [Octen Google access](https://sawtaytoes.github.io/octen-google-access/).
+Public information site: [Octen Google access](https://google-access.octen.dev/).
 Public information for Octen Google integrations
