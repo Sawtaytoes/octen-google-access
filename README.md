@@ -2,7 +2,7 @@
 
 This repository publishes the public information pages for the self-hosted Octen applications that connect to Google accounts.
 
-- **Horizon** reads the calendars and events you choose to connect. Its Google access is read-only.
+- **Horizon** reads the calendars and events you choose to connect. It changes an event only when you create, edit, or delete one in Horizon. It never changes calendar sharing or deletes a calendar.
 - **Mail Sifter** reads and organizes connected Gmail, sends messages when you choose to send them, and reads contacts to help fill recipient addresses. It also supports mail accounts connected through IMAP and SMTP.
 
 Each application has its own OAuth client and asks for its own permissions. Connecting one application does not connect the other. Each Google account holder authorizes access separately and can revoke it in [Google Account settings](https://myaccount.google.com/connections).
