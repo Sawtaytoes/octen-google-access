@@ -12,13 +12,13 @@
     <header>
       <p class="eyebrow"><a href="index.html">Octen Google access</a></p>
       <h1>Privacy policy</h1>
-      <p>Effective October 5, 2026</p>
+      <p>Effective October 7, 2026</p>
     </header>
     <section>
       <h2>What the applications access</h2>
       <p>Horizon uses the Google account identity needed to identify a connection, read-only access to the account’s calendar list, and access to the events on those calendars. It reads events to display them. It creates, changes, or deletes an event only when you do so in Horizon, and only on a calendar the account can already edit. It does not change calendar sharing or delete calendars, and it does not email event guests about a change.</p>
-      <p>Mail Sifter uses the Google account identity needed to identify a connection, Gmail access to read, organize, compose, and send messages, and read-only Contacts access to help suggest recipient addresses. Mail Sifter can alternatively connect to other mail providers through IMAP and SMTP using the credentials supplied for those accounts.</p>
-      <p>Each application has a separate Google OAuth client. A connection to one does not grant the other access. Each account holder must authorize each connection.</p>
+      <p>Mail Sifter uses the Google account identity needed to identify a connection, Gmail access to read, organize, compose, and send messages, and Contacts access to suggest recipient addresses and, when contact editing is enabled, create or update contact names and email addresses at your request. Contact editing changes the selected Google account’s contacts. It does not change other contact fields. Mail Sifter can alternatively connect to other mail providers through IMAP and SMTP using the credentials supplied for those accounts.</p>
+      <p>Each application has a separate Google OAuth client and stores its own account tokens. The clients share a Google Cloud project and consent identity. Each application requests permissions for its own features; Google can recognize consent previously granted to another client in the same project. Each account holder authorizes a connection.</p>
     </section>
     <section>
       <h2>Where data goes</h2>
@@ -26,8 +26,16 @@
       <p>Google continues to store the original Gmail, Calendar, and Contacts data. The applications communicate with Google for sign-in and the Google features you connect. Mail Sifter can also communicate with configured mail providers and, when you use its shipment features, shipping carriers. The applications do not use a separate Octen cloud service to store connected-account data.</p>
     </section>
     <section>
+      <h2>How connected-account data is protected</h2>
+      <p>Connections to the hosted applications use HTTPS. The applications use HTTPS to communicate with Google’s authorization and data APIs. Google connections use a random, short-lived state value and PKCE with an S256 challenge to check the authorization response. OAuth state cookies are Secure, HttpOnly, and SameSite=Lax.</p>
+      <p>Client secrets stay in the server configuration. Refresh tokens stay in the server databases; the browser does not receive them. Account databases and configuration are stored on the privately operated host, with access controlled by host and storage permissions. The applications do not encrypt individual database fields, and the current installation does not encrypt the application storage dataset at rest. Operators and administrators with host access can access the stored data.</p>
+      <p>Mail Sifter limits mail and contact operations to accounts connected to the active profile. A gated profile requires a passcode and a signed, expiring unlock token. These controls hide a profile’s data from casual access within an installation; they do not replace authentication and network access controls for a public deployment. Horizon is intended for a trusted private installation and its kiosk screens. Only approved viewers should have access to those screens.</p>
+      <p>Mail Sifter sanitizes message HTML on the server and renders mail in sandboxed frames. Its sanitized reader cache expires after seven days; completed or deleted messages have their cached copies removed. Drafts and mail information needed for other features may remain in the local database. Operators are responsible for securing installation access, host credentials, storage, and backups.</p>
+      <p>Contact edits change only the name and email fields. A contact version check prevents an older form from silently overwriting a contact changed elsewhere. Horizon permits event edits only when the connected account granted event write access and Google identifies it as an owner or writer of that calendar.</p>
+    </section>
+    <section>
       <h2>Sharing and use</h2>
-      <p>The applications use connected-account data to provide their requested features. They do not sell Google user data or use it for advertising. The public information website is hosted by GitHub Pages and does not request access to a connected account.</p>
+      <p>The applications use connected-account data to provide their requested features. They do not sell Google user data or use it for advertising. The public information website is hosted by GitHub Pages and does not request access to a connected account. Use and transfer of data received from Google APIs follows the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including its Limited Use requirements. Google account data is not used to train generalized artificial intelligence or machine learning models.</p>
     </section>
     <section>
       <h2>Access, revocation, and deletion</h2>

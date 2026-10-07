@@ -23,13 +23,13 @@
         </article>
         <article>
           <h3>Mail Sifter</h3>
-          <p>Helps you read, organize, compose, and send mail. With your permission, it can use Gmail and read Google Contacts to suggest recipient addresses. It also supports IMAP and SMTP accounts.</p>
+          <p>Helps you read, organize, compose, and send mail. With your permission, it can use Gmail and read Google Contacts to suggest recipient addresses and maintain contact names and email addresses. It also supports IMAP and SMTP accounts.</p>
         </article>
       </div>
     </section>
     <section aria-labelledby="control">
       <h2 id="control">Your choice and control</h2>
-      <p>Horizon and Mail Sifter have separate Google OAuth clients. Each account holder approves access for each application separately. You can remove access in <a href="https://myaccount.google.com/connections">Google Account settings</a>.</p>
+      <p>Horizon and Mail Sifter have separate Google OAuth clients. The clients share a Google Cloud project and consent identity. Each application requests its own feature permissions and stores its own account tokens. Each account holder authorizes a connection. You can remove access in <a href="https://myaccount.google.com/connections">Google Account settings</a>.</p>
       <p>The applications store connected-account tokens and working data on the operator’s TrueNAS system. The original Gmail, Calendar, and Contacts data remains with Google. This public website does not receive your connected-account data.</p>
     </section>
     <nav aria-label="More information">
